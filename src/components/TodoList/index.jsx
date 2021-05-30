@@ -13,11 +13,17 @@ TodoList.defaultProps = {
 
 function TodoList(props) {
     const {todos, onTodoClick}  = props;
+    function handleClick(todo){
+        if(onTodoClick){
+            onTodoClick(todo);
+        }
+    }
+
     return (
         <ul className = "todo-list">
             {
                 todos.map(todo => (
-                    <li key = {todo.id}>{todo.title}</li>
+                    <li key = {todo.id} onClick = {() => handleClick(todo)}>{todo.title}</li>
                 ))
             }
         </ul>   
