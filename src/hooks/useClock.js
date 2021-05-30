@@ -15,7 +15,6 @@ function useClock() {
            const now = new Date();
            const newTimeString  = formatDate(now);
            setTimeString(newTimeString);
-           console.log('DO THI THAO');
        }, 1000); 
 
        return () => {
