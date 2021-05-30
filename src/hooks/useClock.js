@@ -15,6 +15,7 @@ function useClock() {
            const now = new Date();
            const newTimeString  = formatDate(now);
            setTimeString(newTimeString);
+           console.log('Test');
        }, 1000); 
 
        return () => {
